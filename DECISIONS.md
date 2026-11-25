@@ -104,3 +104,10 @@ Formato: fecha · decisión · descartes · por qué. Las marcadas **(propuesta)
 - **"Quién es Bru"** lleva un vídeo de fondo detrás del texto (componente `BgVideo`): oscurecido, sin sonido, en bucle, con botón de pausa (WCAG 2.2.2), se carga al acercarse y no con "reducir movimiento".
 - **Provisional:** el vídeo de la web actual incrustado desde YouTube sin cookies (`SWCdzc7Rang`). Con el archivo original basta con poner `about.video.src` en `profile.json` y quitar `youtube`.
 - **Descartes:** foto "cielo" animada y fondo abstracto como provisionales (David prefiere el vídeo real de Bru).
+
+## 2026-11-25 · Opiniones del sector en la portada
+- **Decisión (David):** dos opiniones reales (enviadas por Bru el 21/11) dentro de la portada, en la franja baja entre el nombre y el player: aval para programadores en el primer pantallazo.
+- **Frases:** Adriano Galante: "Una auténtica fuerza de la naturaleza." · Òscar Dalmau (en catalán, como la escribió): "Cartes d'amor musicades pel Bru amb una sensibilitat formidable." Se eligieron las que funcionan sin nombrar el disco.
+- **Formato:** comillas en acento, texto `body-l`, nombre en caption. Sin laureles ni estrellas (abaratan). Componente `PressQuote` (`--compact` en la portada).
+- **Descartes:** sección aparte bajo la portada; ponerlas en la Discografía (no cargar los vinilos con más información).
+- **Efecto:** la portada con opiniones mide entre 760 y 920 px de alto en escritorio para que nada choque.

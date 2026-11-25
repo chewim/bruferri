@@ -12,6 +12,10 @@
 .bf-hero__content { position: relative; margin-top: calc(-1 * var(--bf-space-12)); padding-bottom: var(--bf-space-4); }
 .bf-hero__inner { display: grid; gap: var(--bf-space-3); }
 .bf-hero__lede { max-width: 560px; text-wrap: balance; }
+/* opiniones del sector en la franja baja de la portada (móvil: debajo de la próxima fecha) */
+.bf-hero__press { padding-bottom: var(--bf-space-4); }
+.bf-hero__press .bf-grid { row-gap: var(--bf-space-3); }
+.bf-hero__press .bf-quote { grid-column: 1 / -1; }
 
 @media (min-width: 640px) {
   .bf-hero { --zoom: 2.6; --ty: .4; height: 720px; }
@@ -23,6 +27,12 @@
   .bf-hero__inner { grid-template-columns: repeat(8, minmax(0, 1fr)); column-gap: var(--bf-space-3); }
   .bf-hero__inner > .bf-stack { grid-column: 1 / -1; }
   .bf-hero__inner > .bf-next { grid-column: 1 / span 5; }
+  .bf-hero__press { position: absolute; inset: auto 0 calc(var(--bf-player-offset) + var(--bf-space-3)) 0; padding: 0; }
+  .bf-hero__press .bf-quote:nth-child(odd) { grid-column: 1 / span 4; }
+  .bf-hero__press .bf-quote:nth-child(even) { grid-column: 5 / span 4; }
+  /* con opiniones, el contenido sube lo que ocupa la franja (2 líneas + autor) */
+  .bf-hero--press { height: 800px; }
+  .bf-hero--press .bf-hero__content { bottom: calc(var(--bf-player-offset) + var(--bf-space-3) + var(--bf-space-12) + var(--bf-space-6)); }
 }
 @media (min-width: 1024px) {
   /* la portada nunca pasa de la ventana: en portátiles bajos el player no tapa el nombre */
@@ -33,4 +43,8 @@
   .bf-hero__inner > .bf-stack { grid-column: 1 / span 6; }
   .bf-hero__inner > .bf-next { grid-column: 9 / -1; }
   .bf-hero__lede { font-weight: 500; font-size: var(--bf-text-lead); line-height: var(--bf-lh-lead); }
+  .bf-hero--press { height: clamp(760px, 100vh, 920px); height: clamp(760px, 100svh, 920px); }
+  .bf-hero--press .bf-hero__content { bottom: calc(var(--bf-player-offset) + var(--bf-space-3) + var(--bf-space-12) + var(--bf-space-4)); }
+  .bf-hero__press .bf-quote:nth-child(odd) { grid-column: 1 / span 5; }
+  .bf-hero__press .bf-quote:nth-child(even) { grid-column: 7 / span 5; }
 }
