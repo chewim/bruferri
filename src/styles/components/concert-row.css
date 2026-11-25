@@ -1,0 +1,14 @@
+/* ConcertRow · un concierto de la agenda; --next solo para el primero */
+.bf-concert { display: grid; grid-template-columns: 64px minmax(0, 1fr) auto; gap: var(--bf-space-2); align-items: center; padding: var(--bf-space-2); border-radius: var(--bf-radius-md); background: var(--bf-surface-1); border: 1px solid var(--bf-line); }
+.bf-concert__body { min-width: 0; display: grid; gap: var(--bf-space-0-5); }
+.bf-concert__title { font-weight: 600; font-size: var(--bf-text-body); line-height: var(--bf-lh-body); }
+.bf-concert__place { display: flex; align-items: center; gap: var(--bf-space-0-5); font-size: var(--bf-text-label); line-height: var(--bf-lh-label); color: var(--bf-ink-muted); }
+.bf-concert__tag, .bf-concert__label { display: none; }
+.bf-concert .bf-btn { padding: 0; width: var(--bf-control-m); }
+@media (min-width: 640px) {
+  .bf-concert { grid-template-columns: 64px minmax(0, 1fr) auto auto; gap: var(--bf-space-3); padding: var(--bf-space-2) var(--bf-space-3); }
+  .bf-concert__title { font-size: var(--bf-text-title); line-height: var(--bf-lh-title); }
+  .bf-concert__tag { display: inline-flex; }
+  .bf-concert__label { display: inline; }
+  .bf-concert .bf-btn { padding: 0 var(--bf-space-3); width: auto; }
+}

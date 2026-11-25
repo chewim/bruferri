@@ -1,0 +1,36 @@
+/* Hero · foto de Bru, nombre, definición, oficios y próxima fecha.
+   Encuadre por la cara, no por el ancho: la foto escala con la altura de la portada (--zoom) y se coloca
+   para que el punto focal (--fx, --fy, fracciones de la imagen; vienen de los datos) caiga en (--tx, --ty).
+   Así la cara nunca se corta, sea cual sea el ancho; los lados son la misma foto ampliada y oscurecida. */
+.bf-hero { --zoom: 2.5; --tx: .5; --ty: .45; position: relative; overflow: hidden; background: var(--bf-bg); color: var(--bf-ink); }
+.bf-hero__photo { position: relative; height: 440px; overflow: hidden; }
+.bf-hero__backdrop { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 22%; filter: blur(2px); opacity: .65; }
+.bf-hero__img { position: absolute; left: calc(var(--tx) * 100%); top: calc((var(--ty) - var(--fy) * var(--zoom)) * 100%); width: auto; height: calc(var(--zoom) * 100%); max-width: none; transform: translateX(calc(var(--fx) * -100%)); -webkit-mask-image: linear-gradient(to right, transparent 0, var(--bf-shadow) 16%, var(--bf-shadow) 84%, transparent 100%), linear-gradient(var(--bf-shadow) 70%, transparent 86%); -webkit-mask-composite: source-in; mask-image: linear-gradient(to right, transparent 0, var(--bf-shadow) 16%, var(--bf-shadow) 84%, transparent 100%), linear-gradient(var(--bf-shadow) 70%, transparent 86%); mask-composite: intersect; }
+.bf-hero__photo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to bottom, color-mix(in srgb, var(--bf-bg) 56%, transparent), transparent 30%, transparent 55%, var(--bf-bg) 100%); }
+.bf-hero__aside { position: absolute; inset: calc(var(--bf-space-12) + var(--bf-space-3)) 0 auto 0; pointer-events: none; }
+.bf-roles { grid-column: 3 / -1; justify-self: end; display: grid; gap: var(--bf-space-0-5); padding: 0; list-style: none; text-align: right; font-weight: 500; font-size: var(--bf-text-label); line-height: var(--bf-lh-body); }
+.bf-hero__content { position: relative; margin-top: calc(-1 * var(--bf-space-12)); padding-bottom: var(--bf-space-4); }
+.bf-hero__inner { display: grid; gap: var(--bf-space-3); }
+.bf-hero__lede { max-width: 560px; text-wrap: balance; }
+
+@media (min-width: 640px) {
+  .bf-hero { --zoom: 2.6; --ty: .4; height: 720px; }
+  .bf-hero__photo { position: absolute; inset: 0; height: auto; }
+  .bf-hero__photo::after { background: linear-gradient(to bottom, color-mix(in srgb, var(--bf-bg) 56%, transparent), transparent 22%, transparent 45%, var(--bf-scrim) 78%, var(--bf-bg) 100%); }
+  .bf-hero__aside { top: 20%; }
+  .bf-roles { grid-column: 6 / -1; justify-self: start; text-align: left; gap: var(--bf-space-1); font-size: var(--bf-text-body); }
+  .bf-hero__content { position: absolute; inset: auto 0 calc(var(--bf-player-offset) + var(--bf-space-8)) 0; margin: 0; padding: 0; }
+  .bf-hero__inner { grid-template-columns: repeat(8, minmax(0, 1fr)); column-gap: var(--bf-space-3); }
+  .bf-hero__inner > .bf-stack { grid-column: 1 / -1; }
+  .bf-hero__inner > .bf-next { grid-column: 1 / span 5; }
+}
+@media (min-width: 1024px) {
+  /* la portada nunca pasa de la ventana: en portátiles bajos el player no tapa el nombre */
+  .bf-hero { height: clamp(640px, 100vh, 880px); height: clamp(640px, 100svh, 880px); }
+  .bf-roles { grid-column: 9 / -1; font-weight: 600; font-size: var(--bf-text-lead); line-height: var(--bf-lh-lead); }
+  .bf-hero__content { bottom: calc(var(--bf-player-offset) + var(--bf-space-12)); }
+  .bf-hero__inner { grid-template-columns: repeat(12, minmax(0, 1fr)); align-items: end; }
+  .bf-hero__inner > .bf-stack { grid-column: 1 / span 6; }
+  .bf-hero__inner > .bf-next { grid-column: 9 / -1; }
+  .bf-hero__lede { font-weight: 500; font-size: var(--bf-text-lead); line-height: var(--bf-lh-lead); }
+}

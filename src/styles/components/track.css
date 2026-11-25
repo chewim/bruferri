@@ -1,0 +1,7 @@
+/* Track · fila de pista (panel de música y colección) */
+.bf-track { display: grid; grid-template-columns: 24px minmax(0, 1fr) auto; align-items: center; gap: var(--bf-space-2); width: 100%; height: var(--bf-control-m); padding: 0 var(--bf-space-2); border: 0; border-radius: var(--bf-radius-md); background: transparent; color: var(--bf-ink); font-size: var(--bf-text-body); line-height: var(--bf-lh-body); text-align: left; cursor: pointer; }
+.bf-track:hover, .bf-track[aria-current="true"] { background: var(--bf-surface-2); }
+.bf-track__num { font-weight: 500; font-size: var(--bf-text-caption); line-height: var(--bf-lh-caption); color: var(--bf-ink-muted); font-variant-numeric: tabular-nums; }
+.bf-track[aria-current="true"] .bf-track__num, .bf-track__now { color: var(--bf-accent); }
+.bf-track__name { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.bf-tracks { display: grid; gap: var(--bf-space-0-5); }

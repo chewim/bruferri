@@ -1,0 +1,7 @@
+/* DateBadge · día + mes; la variante --next es la única en acento */
+.bf-date { display: grid; place-content: center; text-align: center; width: 64px; height: 64px; border-radius: var(--bf-radius-md); background: var(--bf-surface-2); flex: none; }
+.bf-date__day { font-weight: 600; font-size: var(--bf-text-lead); line-height: var(--bf-lh-lead); letter-spacing: -0.02em; }
+.bf-date__month { font-weight: 500; font-size: var(--bf-text-caption); line-height: var(--bf-lh-caption); letter-spacing: 0.08em; text-transform: uppercase; color: var(--bf-ink-muted); }
+.bf-date--next { background: var(--bf-accent); color: var(--bf-on-accent); }
+.bf-date--next .bf-date__month { color: var(--bf-on-accent); }
+.bf-date--outline { background: transparent; border: 1px solid var(--bf-line); }

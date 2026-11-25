@@ -1,0 +1,4 @@
+/* Footer · booking, contacto y créditos */
+.bf-footer { border-top: 1px solid var(--bf-line); padding-block: var(--bf-space-6); }
+.bf-footer__inner { display: grid; gap: var(--bf-space-3); }
+@media (min-width: 1024px) { .bf-footer__inner { grid-template-columns: 1fr auto; align-items: end; } }

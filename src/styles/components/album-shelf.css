@@ -1,0 +1,32 @@
+/* AlbumShelf · colección de discos en "Quién es Bru". Fundas en abanico con el vinilo asomando;
+   al elegir una pasa al frente y muestra sus pistas. Posiciones en múltiplos de la funda (--sl). */
+.bf-shelf { --sl: 168px; display: grid; gap: var(--bf-space-3); }
+@media (min-width: 640px) { .bf-shelf { --sl: 208px; } }
+.bf-shelf__stage { position: relative; height: calc(var(--sl) * 1.55); }
+.bf-shelf__glow { position: absolute; left: 50%; top: 50%; width: calc(var(--sl) * 2.6); height: calc(var(--sl) * 2.6); transform: translate(-50%, -50%); border-radius: 50%; object-fit: cover; filter: blur(70px) saturate(1.3); opacity: .35; pointer-events: none; transition: opacity .4s; }
+.bf-shelf__item { position: absolute; z-index: var(--z, 1); left: 50%; top: 52%; width: var(--sl); height: var(--sl); padding: 0; border: 0; background: none; cursor: pointer; transform: translate(-50%, -50%) translate(calc(var(--x) * var(--sl)), calc(var(--y) * var(--sl))) rotate(var(--r)) scale(var(--s)); transition: transform .55s var(--bf-ease); }
+.bf-shelf__float { position: absolute; inset: 0; animation: bf-shelf-float 6s ease-in-out infinite; animation-delay: var(--d); }
+@keyframes bf-shelf-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+.bf-shelf__vinyl { position: absolute; inset: 4%; border-radius: 50%; transform: translate(calc(var(--vx) * 100%), calc(var(--vy) * 100%)); transition: transform .55s var(--bf-ease); }
+.bf-shelf__item:hover .bf-shelf__vinyl, .bf-shelf__item:focus-visible .bf-shelf__vinyl { transform: translate(calc(var(--vx) * 100%), calc((var(--vy) - .1) * 100%)); }
+.bf-shelf__item[aria-pressed="true"]:hover .bf-shelf__vinyl { transform: translate(calc(var(--vx) * 100%), calc(var(--vy) * 100%)); }
+.bf-shelf__disc { position: absolute; inset: 0; display: grid; place-items: center; border-radius: 50%; background: radial-gradient(circle, var(--bf-bg) 0 2.6%, transparent 2.8%), repeating-radial-gradient(circle, var(--bf-vinyl-1) 0 1.4px, var(--bf-vinyl-2) 1.4px 2.8px); box-shadow: 0 18px 36px color-mix(in srgb, var(--bf-shadow) 60%, transparent), inset 0 0 0 1px color-mix(in srgb, var(--bf-shine) 6%, transparent); }
+.bf-shelf__vinyl::after { content: ""; position: absolute; inset: 0; border-radius: 50%; background: conic-gradient(from 20deg, transparent 0 18%, color-mix(in srgb, var(--bf-shine) 9%, transparent) 24%, transparent 30% 68%, color-mix(in srgb, var(--bf-shine) 6%, transparent) 74%, transparent 80%); pointer-events: none; }
+.bf-shelf__label { width: 34%; height: 34%; border-radius: 50%; object-fit: cover; }
+.bf-shelf__item[data-state="playing"] .bf-shelf__disc { animation: bf-shelf-spin 3.2s linear infinite; }
+@keyframes bf-shelf-spin { to { transform: rotate(360deg); } }
+.bf-shelf__cover { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; border-radius: var(--bf-radius-xs); box-shadow: 0 24px 48px color-mix(in srgb, var(--bf-shadow) 55%, transparent), inset 0 0 0 1px color-mix(in srgb, var(--bf-shine) 8%, transparent); }
+.bf-shelf__num { position: absolute; left: var(--bf-space-1); bottom: var(--bf-space-1); padding: 0 var(--bf-space-1); border-radius: var(--bf-radius-xs); background: color-mix(in srgb, var(--bf-bg) 72%, transparent); color: var(--bf-ink); font-weight: 600; font-size: var(--bf-text-caption); line-height: var(--bf-lh-caption); letter-spacing: .1em; }
+.bf-shelf__new { position: absolute; right: calc(-1 * var(--bf-space-1)); top: calc(-1 * var(--bf-space-1)); display: grid; place-items: center; width: 48px; height: 48px; border-radius: 50%; background: var(--bf-accent); color: var(--bf-on-accent); font-weight: 700; font-size: var(--bf-text-caption); line-height: var(--bf-lh-caption); letter-spacing: .04em; text-transform: uppercase; transform: rotate(12deg); box-shadow: 0 6px 16px color-mix(in srgb, var(--bf-shadow) 40%, transparent); }
+.bf-shelf__hint { text-align: center; }
+.bf-shelf__detail { display: grid; gap: var(--bf-space-2); animation: bf-shelf-in .35s ease-out; }
+.bf-shelf__detail[hidden] { display: none; }
+@keyframes bf-shelf-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+.bf-shelf__head { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: var(--bf-space-2); }
+.bf-shelf__titles { display: grid; gap: var(--bf-space-0-5); min-width: 0; }
+.bf-shelf__actions { display: flex; gap: var(--bf-space-1); }
+.bf-shelf__note { text-transform: none; letter-spacing: 0; }
+@media (prefers-reduced-motion: reduce) {
+  .bf-shelf__item, .bf-shelf__vinyl { transition: none; }
+  .bf-shelf__float, .bf-shelf__item[data-state="playing"] .bf-shelf__disc, .bf-shelf__detail { animation: none; }
+}

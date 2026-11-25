@@ -1,0 +1,5 @@
+/* Chip · filtros y metadatos; estado con aria-pressed */
+.bf-chip { display: inline-flex; align-items: center; gap: var(--bf-space-0-5); height: var(--bf-control-s); padding: 0 var(--bf-space-2); border-radius: var(--bf-radius-pill); border: 1px solid var(--bf-line); background: transparent; color: var(--bf-ink-muted); font-weight: 500; font-size: var(--bf-text-label); line-height: var(--bf-lh-label); cursor: pointer; white-space: nowrap; }
+.bf-chip[aria-pressed="true"] { background: var(--bf-ink); color: var(--bf-bg); border-color: var(--bf-ink); }
+.bf-chip--static { cursor: default; }
+.bf-chips { display: flex; gap: var(--bf-space-1); overflow-x: auto; scrollbar-width: none; }

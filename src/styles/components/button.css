@@ -1,0 +1,12 @@
+/* Button · una acción primaria por vista (DESIGN_SYSTEM.md) */
+.bf-btn { display: inline-flex; align-items: center; justify-content: center; gap: var(--bf-space-1); height: var(--bf-control-m); padding: 0 var(--bf-space-3); border-radius: var(--bf-radius-pill); border: 1px solid transparent; font-weight: 500; font-size: var(--bf-text-label); line-height: var(--bf-lh-label); cursor: pointer; text-decoration: none; white-space: nowrap; transition: transform .15s, background .15s; }
+.bf-btn:active { transform: scale(.98); }
+.bf-btn:hover { color: inherit; }
+.bf-btn--primary { background: var(--bf-accent); color: var(--bf-on-accent); }
+.bf-btn--primary:hover { color: var(--bf-on-accent); }
+.bf-btn--secondary { background: var(--bf-surface-2); color: var(--bf-ink); }
+.bf-btn--ghost { background: transparent; color: var(--bf-ink); border-color: var(--bf-line); }
+.bf-btn--glass { background: var(--bf-glass); color: var(--bf-ink); border-color: var(--bf-line); backdrop-filter: var(--bf-blur); -webkit-backdrop-filter: var(--bf-blur); }
+.bf-btn--s { height: var(--bf-control-s); padding: 0 var(--bf-space-2); }
+.bf-btn--block { width: 100%; }
+@media (prefers-reduced-motion: reduce) { .bf-btn { transition: none; } }

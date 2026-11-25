@@ -1,0 +1,17 @@
+/* ContactSheet · hoja de contacto con confirmación y salidas */
+.bf-sheet-scrim { position: fixed; inset: 0; z-index: 50; background: var(--bf-scrim); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); display: flex; align-items: flex-end; justify-content: center; }
+.bf-sheet-scrim[hidden] { display: none; }
+.bf-sheet { width: 100%; max-width: 560px; max-height: 92vh; overflow-y: auto; background: var(--bf-surface-1); border: 1px solid var(--bf-line); border-radius: var(--bf-radius-xl) var(--bf-radius-xl) 0 0; padding: var(--bf-space-3) var(--bf-space-2) var(--bf-space-4); display: grid; gap: var(--bf-space-3); color: var(--bf-ink); }
+.bf-sheet__head { display: flex; align-items: flex-start; justify-content: space-between; gap: var(--bf-space-2); }
+.bf-sheet__title { font-weight: 600; font-size: var(--bf-text-lead); line-height: var(--bf-lh-lead); }
+.bf-sheet__form { display: grid; gap: var(--bf-space-3); }
+.bf-booking { display: grid; gap: var(--bf-space-0-5); padding: var(--bf-space-2); border-radius: var(--bf-radius-md); background: var(--bf-surface-2); }
+.bf-field { display: grid; gap: var(--bf-space-1); border: 0; padding: 0; margin: 0; }
+.bf-field label, .bf-field legend { padding: 0; font-weight: 500; font-size: var(--bf-text-label); line-height: var(--bf-lh-label); color: var(--bf-ink-muted); }
+.bf-input { height: var(--bf-control-m); padding: 0 var(--bf-space-2); border-radius: var(--bf-radius-md); border: 1px solid var(--bf-line); background: var(--bf-surface-2); color: var(--bf-ink); font: inherit; font-size: var(--bf-text-body); line-height: var(--bf-lh-body); width: 100%; }
+.bf-input--area { height: 120px; padding: var(--bf-space-2); resize: vertical; }
+.bf-sheet__note { text-transform: none; letter-spacing: 0; }
+@media (min-width: 640px) {
+  .bf-sheet-scrim { align-items: center; padding: var(--bf-space-3); }
+  .bf-sheet { border-radius: var(--bf-radius-xl); padding: var(--bf-space-4); }
+}

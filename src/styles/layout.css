@@ -1,0 +1,26 @@
+/* Contenedor, retícula 4 · 8 · 12, secciones y docks (barra superior y player) */
+.bf-page { position: relative; min-height: 100vh; }
+.bf-container { width: 100%; max-width: calc(var(--bf-content-max) + 2 * var(--bf-space-6)); margin: 0 auto; padding-inline: var(--bf-space-2); }
+.bf-section { padding-block: var(--bf-space-8); }
+.bf-section--flush-top { padding-top: 0; }
+.bf-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--bf-space-2); }
+.bf-stack { display: flex; flex-direction: column; gap: var(--bf-space-2); }
+.bf-stack--s { gap: var(--bf-space-1); }
+.bf-row { display: flex; flex-wrap: wrap; align-items: center; gap: var(--bf-space-2); }
+.bf-span-all { grid-column: 1 / -1; }
+@media (min-width: 640px) {
+  .bf-container { padding-inline: var(--bf-space-4); }
+  .bf-grid { grid-template-columns: repeat(8, minmax(0, 1fr)); gap: var(--bf-space-3); }
+}
+@media (min-width: 1024px) {
+  .bf-container { padding-inline: var(--bf-space-6); }
+  .bf-section { padding-block: var(--bf-space-12); }
+  .bf-grid { grid-template-columns: repeat(12, minmax(0, 1fr)); }
+}
+
+/* docks: la barra superior flota sobre la portada; el player se pega abajo */
+.bf-dock-top { position: sticky; top: 0; height: 0; z-index: 20; }
+.bf-dock-bottom { position: sticky; bottom: var(--bf-space-2); z-index: 30; padding-inline: var(--bf-space-2); }
+.bf-player-spacer { height: var(--bf-space-6); }
+@media (min-width: 640px) { .bf-dock-bottom { padding-inline: var(--bf-space-4); } }
+@media (min-width: 1024px) { .bf-dock-bottom { padding-inline: var(--bf-space-6); } }

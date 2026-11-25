@@ -1,0 +1,3 @@
+/* ConcertList · filas de la agenda */
+.bf-concerts { display: grid; gap: var(--bf-space-1); }
+.bf-concerts__empty { padding: var(--bf-space-4) 0; text-align: center; }

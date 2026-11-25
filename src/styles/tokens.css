@@ -1,0 +1,57 @@
+/* Bru Ferri · tokens. ÚNICO archivo con valores: el resto de CSS usa var(--bf-*).
+   Cuándo usar cada uno: DESIGN_SYSTEM.md. Breakpoints (no pueden ser variables): 640 tablet · 1024 escritorio. */
+:root {
+  /* color · roles */
+  --bf-bg: #0b0b0c;
+  --bf-surface-1: #161618;
+  --bf-surface-2: #222225;
+  --bf-glass: rgba(22, 22, 24, 0.72);
+  --bf-ink: #f5f3ee;
+  --bf-ink-muted: #a3a19b;
+  --bf-line: rgba(255, 255, 255, 0.10);
+  --bf-accent: #ede56b;
+  --bf-on-accent: #121212;
+  --bf-scrim: rgba(11, 11, 12, 0.88);
+  --bf-shadow: #000;
+  --bf-shine: #fff;
+  /* vinilo (solo AlbumShelf) */
+  --bf-vinyl-1: #121214;
+  --bf-vinyl-2: #1c1c1f;
+
+  /* tipografía: Archivo, una familia; eje wdth para el nombre y las etiquetas */
+  --bf-font: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --bf-text-caption: 12px;  --bf-lh-caption: 16px;
+  --bf-text-label: 14px;    --bf-lh-label: 16px;
+  --bf-text-body: 16px;     --bf-lh-body: 24px;
+  --bf-text-body-l: 18px;   --bf-lh-body-l: 28px;
+  --bf-text-title: 20px;    --bf-lh-title: 24px;
+  --bf-text-lead: 24px;     --bf-lh-lead: 32px;
+  --bf-text-heading: 32px;  --bf-lh-heading: 40px;
+  --bf-text-display: 56px;  --bf-lh-display: 56px;
+
+  /* espacio · retícula de 8 */
+  --bf-space-0-5: 4px; --bf-space-1: 8px; --bf-space-2: 16px; --bf-space-3: 24px;
+  --bf-space-4: 32px; --bf-space-6: 48px; --bf-space-8: 64px; --bf-space-12: 96px;
+
+  /* forma */
+  --bf-radius-xs: 4px; --bf-radius-sm: 8px; --bf-radius-md: 16px; --bf-radius-lg: 24px; --bf-radius-xl: 32px; --bf-radius-pill: 999px;
+  --bf-control-s: 32px; --bf-control-m: 48px; --bf-control-l: 64px;
+
+  /* layout */
+  --bf-content-max: 1200px;
+  --bf-topbar-h: 64px;
+  --bf-player-h: 88px;
+  /* lo que ocupa el player desde el borde inferior: dock + padding + alto */
+  --bf-player-offset: calc(var(--bf-player-h) + var(--bf-space-4));
+  --bf-blur: blur(24px);
+  --bf-ease: cubic-bezier(.2, .8, .2, 1);
+}
+@media (min-width: 640px) {
+  :root { --bf-topbar-h: 80px; }
+}
+@media (min-width: 1024px) {
+  :root {
+    --bf-text-heading: 56px; --bf-lh-heading: 56px;
+    --bf-text-display: 128px; --bf-lh-display: 112px;
+  }
+}

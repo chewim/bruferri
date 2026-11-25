@@ -1,0 +1,13 @@
+/* TopBar · Contacta a la izquierda, marca centrada, idioma a la derecha; alineada con el contenedor */
+.bf-topbar { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: var(--bf-space-2); height: var(--bf-topbar-h); max-width: calc(var(--bf-content-max) + 2 * var(--bf-space-6)); margin-inline: auto; padding-inline: var(--bf-space-2); color: var(--bf-ink); }
+.bf-topbar__start { justify-self: start; }
+.bf-topbar__end { justify-self: end; display: flex; gap: var(--bf-space-1); }
+.bf-topbar__brand { font-weight: 700; font-size: var(--bf-text-label); line-height: var(--bf-lh-body); font-variation-settings: "wdth" 120; letter-spacing: 0.2em; text-transform: uppercase; text-decoration: none; color: inherit; }
+.bf-topbar__contact { height: 40px; }
+.bf-topbar__contact-label { display: none; }
+@media (min-width: 640px) {
+  .bf-topbar { padding-inline: var(--bf-space-4); }
+  .bf-topbar__contact-label { display: inline; }
+  .bf-topbar__brand { font-size: var(--bf-text-body); }
+}
+@media (min-width: 1024px) { .bf-topbar { padding-inline: var(--bf-space-6); } }

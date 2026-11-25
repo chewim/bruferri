@@ -1,0 +1,5 @@
+/* Concerts · agenda con filtros por proyecto */
+.bf-section-head { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: var(--bf-space-2); margin-bottom: var(--bf-space-3); }
+.bf-section-head__text { display: grid; gap: var(--bf-space-1); }
+.bf-concerts__more { display: flex; justify-content: center; margin-top: var(--bf-space-3); }
+.bf-concerts__more[hidden] { display: none; }

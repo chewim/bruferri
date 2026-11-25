@@ -1,0 +1,15 @@
+[
+  { "id": "c1", "date_start": null, "date_end": "2026-11-22", "project_slug": "rey", "venue": "Teatro de la Comedia", "city": "Madrid", "visible": true },
+  { "id": "c2", "date_start": "2026-11-27", "project_slug": "rey", "city": "Arahal, Sevilla", "visible": true },
+  { "id": "c3", "date_start": "2026-11-28", "project_slug": "rey", "city": "San Fernando de Henares", "visible": true },
+  { "id": "c4", "date_start": "2026-12-04", "project_slug": "rey", "city": "Ponferrada", "visible": true },
+  { "id": "c5", "date_start": "2026-12-12", "project_slug": "rey", "city": "Velilla de San Antonio", "visible": true },
+  { "id": "c6", "date_start": "2026-12-18", "project_slug": "musica", "title_other": "Um a um · Marta Garrett", "city": "Barcelona", "visible": true },
+  { "id": "c7", "date_start": "2026-12-19", "project_slug": "rey", "venue": "Teatro Lava", "city": "Valladolid", "visible": true },
+  { "id": "c8", "date_start": "2027-01-23", "project_slug": "rey", "city": "Alcorcón", "visible": true },
+  { "id": "c9", "date_start": "2027-02-14", "project_slug": "ocells", "venue": "Fira Terres", "visible": true },
+  { "id": "c10", "date_start": "2027-02-20", "project_slug": "rey", "city": "Coslada", "visible": true },
+  { "id": "c11", "date_start": "2027-06-05", "project_slug": "ocells", "city": "Great Yarmouth", "country": "Reino Unido", "visible": true },
+  { "id": "c12", "date_start": "2027-06-12", "project_slug": "ocells", "venue": "Kaldearte", "city": "Vitoria", "visible": true },
+  { "id": "c13", "date_tba": "2027-10", "project_slug": "ocells", "venue": "Istanbul Theatre Festival", "country": "Turquía", "visible": true }
+]

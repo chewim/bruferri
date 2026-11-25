@@ -1,0 +1,9 @@
+/* About · "Quién es Bru": texto a la izquierda, colección de discos a la derecha */
+.bf-about__lead { grid-column: 1 / -1; display: grid; gap: var(--bf-space-3); align-content: start; }
+.bf-about__media { grid-column: 1 / -1; }
+.bf-about__facts { display: flex; flex-wrap: wrap; gap: var(--bf-space-1) var(--bf-space-3); }
+.bf-about__facts b { color: var(--bf-ink); font-weight: 600; }
+@media (min-width: 1024px) {
+  .bf-about__lead { grid-column: 1 / span 6; }
+  .bf-about__media { grid-column: 8 / -1; align-self: center; }
+}

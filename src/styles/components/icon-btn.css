@@ -1,0 +1,6 @@
+/* IconButton · solo icono, siempre con aria-label */
+.bf-icon-btn { display: inline-grid; place-items: center; width: var(--bf-control-m); height: var(--bf-control-m); border-radius: var(--bf-radius-pill); border: 0; background: var(--bf-surface-2); color: var(--bf-ink); cursor: pointer; flex: none; padding: 0; text-decoration: none; }
+.bf-icon-btn--s { width: var(--bf-control-s); height: var(--bf-control-s); }
+.bf-icon-btn--l { width: var(--bf-control-l); height: var(--bf-control-l); }
+.bf-icon-btn--accent { background: var(--bf-accent); color: var(--bf-on-accent); }
+.bf-icon-btn--bare { background: transparent; }

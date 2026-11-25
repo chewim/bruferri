@@ -1,0 +1,96 @@
+{
+  "name": "Bru Ferri",
+  "roles": [
+    "Pianista",
+    "Compositor",
+    "Cantante",
+    "Improvisador"
+  ],
+  "lede": "Del impresionismo al flamenco, del jazz a la electrónica. Música para escena, pantalla y piano solo.",
+  "description": "Bru Ferri, pianista, compositor, cantante e improvisador de Barcelona. Del impresionismo al flamenco, del jazz a la electrónica.",
+  "hero": {
+    "src": "assets/img/bru-cielo-1200.webp",
+    "srcset": "assets/img/bru-cielo-720.webp 720w, assets/img/bru-cielo-1200.webp 1200w",
+    "width": 1200,
+    "height": 2135,
+    "alt": "Bru Ferri de perfil con el cielo azul detrás",
+    "focal_x": 0.48,
+    "focal_y": 0.645,
+    "credit": null,
+    "thumb": "assets/img/bru-cielo-720.webp"
+  },
+  "about": {
+    "kicker": "Quién es Bru",
+    "title": "Un músico interdisciplinar, difícil de etiquetar.",
+    "body": "Nacido en Barcelona en 1995, se formó en piano clásico y jazz, canto, composición e improvisación en el Conservatori del Liceu y el Taller de Músics. Hoy es director musical y compositor de El Rey de la Farándula y La Conferència dels Ocells, y da clases de voz, piano y armonía.",
+    "facts": [
+      {
+        "n": "5",
+        "label": "álbumes de estudio"
+      },
+      {
+        "n": "9",
+        "label": "países en gira"
+      },
+      {
+        "n": "3",
+        "label": "continentes"
+      }
+    ]
+  },
+  "booking": {
+    "label": "Booking y management",
+    "name": "Maria Thorson",
+    "email": "info@insectotropics.com"
+  },
+  "projects": {
+    "rey": {
+      "title": "El Rey de la Farándula",
+      "tag": "Teatro"
+    },
+    "ocells": {
+      "title": "La Conferència dels Ocells",
+      "tag": "Insectotròpics"
+    },
+    "musica": {
+      "title": "Conciertos",
+      "tag": "Concierto"
+    }
+  },
+  "contactReasons": [
+    {
+      "id": "programacion",
+      "label": "Programación"
+    },
+    {
+      "id": "entradas",
+      "label": "Entradas"
+    },
+    {
+      "id": "composicion",
+      "label": "Composición"
+    },
+    {
+      "id": "clases",
+      "label": "Clases"
+    },
+    {
+      "id": "prensa",
+      "label": "Prensa"
+    }
+  ],
+  "langs": [
+    {
+      "code": "ES",
+      "name": "Castellano"
+    },
+    {
+      "code": "CA",
+      "name": "Català"
+    },
+    {
+      "code": "EN",
+      "name": "English"
+    }
+  ]
+}

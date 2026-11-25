@@ -1,0 +1,25 @@
+/* PlayerBar · siempre visible abajo, en pausa al cargar; abre el panel de música */
+.bf-player { position: relative; max-width: var(--bf-content-max); margin: 0 auto; }
+.bf-player__bar { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: var(--bf-space-2); height: var(--bf-player-h); padding: 0 var(--bf-space-2); border-radius: var(--bf-radius-lg); background: var(--bf-glass); border: 1px solid var(--bf-line); backdrop-filter: var(--bf-blur); -webkit-backdrop-filter: var(--bf-blur); color: var(--bf-ink); }
+.bf-player__left { display: flex; align-items: center; gap: var(--bf-space-2); min-width: 0; padding: 0; border: 0; background: transparent; text-align: left; cursor: pointer; }
+.bf-player__cover { width: 56px; height: 56px; border-radius: var(--bf-radius-sm); overflow: hidden; flex: none; background: var(--bf-surface-2); }
+.bf-player__cover img { width: 100%; height: 100%; object-fit: cover; }
+.bf-player__meta { min-width: 0; display: grid; gap: var(--bf-space-0-5); }
+.bf-player__track { font-weight: 600; font-size: var(--bf-text-body); line-height: var(--bf-lh-body); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.bf-player__album { display: flex; align-items: center; gap: var(--bf-space-0-5); font-size: var(--bf-text-label); line-height: var(--bf-lh-label); color: var(--bf-ink-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.bf-player__chev { transition: transform .15s; }
+.bf-player__left[aria-expanded="true"] .bf-player__chev { transform: rotate(180deg); }
+.bf-player__center { display: flex; align-items: center; gap: var(--bf-space-1); }
+.bf-player__controls { display: flex; align-items: center; gap: var(--bf-space-1); }
+.bf-player__end, .bf-player__skip { display: none; }
+.bf-progress { display: none; align-items: center; gap: var(--bf-space-2); width: 100%; font-weight: 500; font-size: var(--bf-text-caption); line-height: var(--bf-lh-caption); color: var(--bf-ink-muted); font-variant-numeric: tabular-nums; }
+.bf-progress__track { flex: 1; height: 4px; border-radius: var(--bf-radius-pill); background: var(--bf-line); position: relative; overflow: hidden; }
+.bf-progress__fill { position: absolute; inset: 0 auto 0 0; width: var(--pct, 0%); background: var(--bf-accent); border-radius: inherit; transition: width .3s linear; }
+@media (min-width: 768px) {
+  .bf-player__bar { grid-template-columns: minmax(0, 1fr) minmax(280px, 1.4fr) minmax(0, 1fr); padding: 0 var(--bf-space-3); }
+  .bf-player__center { flex-direction: column; }
+  .bf-player__skip { display: inline-grid; }
+  .bf-progress { display: flex; }
+  .bf-player__end { display: flex; justify-self: end; gap: var(--bf-space-1); }
+}
+@media (prefers-reduced-motion: reduce) { .bf-player__chev, .bf-progress__fill { transition: none; } }
