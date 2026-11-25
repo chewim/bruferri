@@ -1,13 +1,8 @@
-/* Press · dos opiniones del sector tras la portada, sobre la retícula (4 · 8 · 12) */
+/* Press · la caja de opiniones tras la portada, sobre la retícula (4 · 8 · 12) */
 .bf-press { padding-block: var(--bf-space-8); }
-.bf-press .bf-grid { row-gap: var(--bf-space-6); }
-.bf-press .bf-quote { grid-column: 1 / -1; }
-@media (min-width: 640px) {
-  .bf-press .bf-quote:nth-child(odd) { grid-column: 1 / span 4; }
-  .bf-press .bf-quote:nth-child(even) { grid-column: 5 / span 4; }
-}
+.bf-press__box { grid-column: 1 / -1; }
+@media (min-width: 640px) { .bf-press__box { grid-column: 1 / span 7; } }
 @media (min-width: 1024px) {
   .bf-press { padding-block: var(--bf-space-12) var(--bf-space-8); }
-  .bf-press .bf-quote:nth-child(odd) { grid-column: 1 / span 5; }
-  .bf-press .bf-quote:nth-child(even) { grid-column: 7 / span 5; }
+  .bf-press__box { grid-column: 1 / span 9; }
 }

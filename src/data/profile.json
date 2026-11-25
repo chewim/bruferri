@@ -109,13 +109,15 @@
       "quote": "Una auténtica fuerza de la naturaleza.",
       "author": "Adriano Galante",
       "role": null,
-      "lang": "es"
+      "lang": "es",
+      "photo": null
     },
     {
       "quote": "Cartes d’amor musicades pel Bru amb una sensibilitat formidable.",
       "author": "Òscar Dalmau",
       "role": null,
-      "lang": "ca"
+      "lang": "ca",
+      "photo": null
     }
   ]
 }

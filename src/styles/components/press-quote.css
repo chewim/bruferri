@@ -1,6 +1,0 @@
-/* PressQuote · comillas en acento, frase grande y nombre pequeño. Sin laureles ni estrellas. */
-.bf-quote { display: grid; gap: var(--bf-space-2); align-content: start; }
-.bf-quote::before { content: "“"; display: block; height: var(--bf-space-6); color: var(--bf-accent); font-weight: 700; font-size: var(--bf-text-display); line-height: var(--bf-lh-display); }
-.bf-quote__text { margin: 0; font-weight: 500; font-size: var(--bf-text-title); line-height: var(--bf-lh-title); letter-spacing: -0.01em; text-wrap: balance; }
-.bf-quote__by { font-weight: 500; font-size: var(--bf-text-caption); line-height: var(--bf-lh-caption); font-variation-settings: "wdth" 110; letter-spacing: 0.14em; text-transform: uppercase; }
-@media (min-width: 640px) { .bf-quote__text { font-size: var(--bf-text-lead); line-height: var(--bf-lh-lead); } }

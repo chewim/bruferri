@@ -5,7 +5,7 @@
 - [ ] Bru confirma la foto de portada (se construye con "cielo"; "bosque" de reserva). Originales en alta.
 - [ ] Acceso al registrador y DNS de bruferri.com; confirmar si hay correo @bruferri.com.
 - [ ] Crédito de la foto de portada.
-- [ ] Cargo de Òscar Dalmau y Adriano Galante para las opiniones (hoy solo el nombre).
+- [ ] Cargo y foto de perfil de Òscar Dalmau y Adriano Galante, con su permiso (hoy nombre e iniciales).
 - [ ] *Petites Cançons d'Amor*: las dos opiniones hablan de este disco y no está en la Discografía. ¿Nuevo o por salir? Portada, año y pistas.
 - [ ] Archivo original del vídeo de fondo de "Quién es Bru" (MP4 corto en bucle, sin sonido, ~10–20 s) y permiso; hoy se incrusta desde YouTube.
 - [ ] URLs de taquilla de cada concierto.

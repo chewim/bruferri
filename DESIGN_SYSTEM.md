@@ -53,7 +53,7 @@ Fuente completa con previews: https://claude.ai/artifact/VmSpdWrWV2pe8xhnWv5V8o
 | MusicPanel | Discos y pistas desde el player | Otros menús |
 | Track | Una pista (panel de música y colección) | Listas que no son de audio |
 | AlbumShelf | La colección de discos en la sección Discografía (`--wide`); manda reproducir al player | Más de un sitio por página |
-| PressQuote | Opinión real del sector, corta y con nombre; en el idioma original; en su propia sección tras la portada | Citas inventadas o sin autor; dentro de la portada |
+| Testimonials | Opiniones reales del sector, de una en una en la misma caja, con progreso y pausa; en el idioma original | Citas inventadas o sin autor; más de 4 opiniones; dentro de la portada |
 | BgVideo | Vídeo decorativo detrás de un texto, siempre oscurecido y con pausa | Contenido que haya que ver con sonido; más de uno por página |
 | LangSelect | Idioma en la TopBar | — |
 
