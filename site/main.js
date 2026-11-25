@@ -4,6 +4,7 @@ import { initShelf } from './features/shelf/index.js';
 import { initAgenda } from './features/agenda/index.js';
 import { initContact } from './features/contact/index.js';
 import { initLang } from './features/lang/index.js';
+import { initBgVideo } from './features/bgvideo/index.js';
 
 // Arranca solo las features presentes en la página
 const data = await getData();
@@ -14,3 +15,4 @@ const contact = $('[data-feature="contact"]') ? initContact($('[data-feature="co
 if ($('[data-mount="player"]')) initPlayer($('[data-mount="player"]'), data);
 if ($('[data-mount="shelf"]')) initShelf($('[data-mount="shelf"]'), data);
 if ($('#conciertos')) initAgenda($('#conciertos'), data, { onInfo: (subject) => contact?.open(subject) });
+if ($('[data-feature="bgvideo"]')) initBgVideo($('[data-feature="bgvideo"]'));

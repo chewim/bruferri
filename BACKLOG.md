@@ -5,6 +5,7 @@
 - [ ] Bru confirma la foto de portada (se construye con "cielo"; "bosque" de reserva). Originales en alta.
 - [ ] Acceso al registrador y DNS de bruferri.com; confirmar si hay correo @bruferri.com.
 - [ ] Crédito de la foto de portada.
+- [ ] Archivo original del vídeo de fondo de "Quién es Bru" (MP4 corto en bucle, sin sonido, ~10–20 s) y permiso; hoy se incrusta desde YouTube.
 - [ ] URLs de taquilla de cada concierto.
 - [ ] Audio de las pistas del player (archivos propios o permiso para enlazar Bandcamp).
 - [ ] Email de destino del formulario (¿booking, Bru o ambos?).

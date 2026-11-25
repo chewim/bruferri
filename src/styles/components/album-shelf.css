@@ -26,6 +26,11 @@
 .bf-shelf__titles { display: grid; gap: var(--bf-space-0-5); min-width: 0; }
 .bf-shelf__actions { display: flex; gap: var(--bf-space-1); }
 .bf-shelf__note { text-transform: none; letter-spacing: 0; }
+/* --wide: sección propia. En escritorio, la colección a la izquierda y las pistas a la derecha */
+@media (min-width: 1024px) {
+  .bf-shelf--wide { --sl: 248px; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); align-items: center; column-gap: var(--bf-space-6); }
+  .bf-shelf--wide .bf-shelf__hint { text-align: left; }
+}
 @media (prefers-reduced-motion: reduce) {
   .bf-shelf__item, .bf-shelf__vinyl { transition: none; }
   .bf-shelf__float, .bf-shelf__item[data-state="playing"] .bf-shelf__disc, .bf-shelf__detail { animation: none; }

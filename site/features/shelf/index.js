@@ -7,7 +7,8 @@ export function initShelf(root, { albums }) {
   const list = albums.list;
   let active = null;
   let now = null;
-  const render = () => mount(root, AlbumShelf({ albums: list, active, now }));
+  const wide = !!root.querySelector('.bf-shelf--wide');
+  const render = () => mount(root, AlbumShelf({ albums: list, active, now, wide }));
 
   on(root, 'click', '[data-action]', (e, el) => {
     const a = el.dataset.action;

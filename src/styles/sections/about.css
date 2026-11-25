@@ -1,9 +1,12 @@
-/* About · "Quién es Bru": texto a la izquierda, colección de discos a la derecha */
+/* About · "Quién es Bru": texto sobre el vídeo de fondo (BgVideo), apoyado en las columnas 1–7 */
+.bf-about { position: relative; isolation: isolate; overflow: hidden; display: flex; align-items: center; min-height: 640px; }
+.bf-about > .bf-container { width: 100%; }
 .bf-about__lead { grid-column: 1 / -1; display: grid; gap: var(--bf-space-3); align-content: start; }
-.bf-about__media { grid-column: 1 / -1; }
+.bf-about__body { color: var(--bf-ink); }
 .bf-about__facts { display: flex; flex-wrap: wrap; gap: var(--bf-space-1) var(--bf-space-3); }
 .bf-about__facts b { color: var(--bf-ink); font-weight: 600; }
+@media (min-width: 640px) { .bf-about__lead { grid-column: 1 / span 6; } }
 @media (min-width: 1024px) {
+  .bf-about { min-height: 720px; }
   .bf-about__lead { grid-column: 1 / span 6; }
-  .bf-about__media { grid-column: 8 / -1; align-self: center; }
 }

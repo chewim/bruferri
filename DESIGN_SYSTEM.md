@@ -52,7 +52,8 @@ Fuente completa con previews: https://claude.ai/artifact/VmSpdWrWV2pe8xhnWv5V8o
 | ConcertList | La agenda: 6 filas y "Ver todas" | — |
 | MusicPanel | Discos y pistas desde el player | Otros menús |
 | Track | Una pista (panel de música y colección) | Listas que no son de audio |
-| AlbumShelf | La colección de discos en "Quién es Bru"; manda reproducir al player | Más de un sitio por página |
+| AlbumShelf | La colección de discos en la sección Discografía (`--wide`); manda reproducir al player | Más de un sitio por página |
+| BgVideo | Vídeo decorativo detrás de un texto, siempre oscurecido y con pausa | Contenido que haya que ver con sonido; más de uno por página |
 | LangSelect | Idioma en la TopBar | — |
 
 ## Backoffice

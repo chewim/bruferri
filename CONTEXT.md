@@ -3,6 +3,7 @@ Escala: web de cliente con backoffice → fases 0 (breve), 1, 2, 3. Sin modo dem
 Deuda consciente:
 - 2026-11-25 · el formulario de contacto abre el correo (mailto) hasta tener la Edge Function `contact` (fase 3.2)
 - 2026-11-25 · el player simula el avance: no hay audio todavía (BACKLOG)
+- 2026-11-25 · el vídeo de fondo de "Quién es Bru" se incrusta desde YouTube hasta tener el archivo (BACKLOG)
 - 2026-11-25 · "Trayectoria" enlazada pero sin construir (fase 3.1); hoy cae en la 404
 
 # Bru Ferri — web y backoffice

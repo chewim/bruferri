@@ -98,3 +98,9 @@ Formato: fecha · decisión · descartes · por qué. Las marcadas **(propuesta)
 - **Contacto:** hasta la Edge Function, "Enviar" abre el correo con el mensaje listo para booking. Honesto y funcional.
 - **Check** (`scripts/check.mjs`, basado en el de Pujobaixo) con baseline a cero: colores, tamaños de letra, radios y espacios solo desde tokens; sin `style` con valores (solo variables CSS como datos); capas; un CSS por componente; tokens sin uso; `node --check`. Lo ejecutan el hook de pre-commit y la Action de despliegue.
 - **Captura (caso de estudio):** 54 tokens · 15 componentes · 0 valores fuera del sistema · contraste mínimo de texto 6,1:1.
+
+## 2026-11-25 · Discografía como sección y vídeo detrás de "Quién es Bru"
+- **Decisión (David):** la colección de vinilos pasa a una sección propia, "Discografía" (`#discografia`), entre "Quién es Bru" y "Conciertos", para mejorar la usabilidad: en escritorio, colección a la izquierda y pistas a la derecha.
+- **"Quién es Bru"** lleva un vídeo de fondo detrás del texto (componente `BgVideo`): oscurecido, sin sonido, en bucle, con botón de pausa (WCAG 2.2.2), se carga al acercarse y no con "reducir movimiento".
+- **Provisional:** el vídeo de la web actual incrustado desde YouTube sin cookies (`SWCdzc7Rang`). Con el archivo original basta con poner `about.video.src` en `profile.json` y quitar `youtube`.
+- **Descartes:** foto "cielo" animada y fondo abstracto como provisionales (David prefiere el vídeo real de Bru).

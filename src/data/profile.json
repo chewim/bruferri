@@ -36,7 +36,14 @@
         "n": "3",
         "label": "continentes"
       }
-    ]
+    ],
+    "video": {
+      "youtube": "SWCdzc7Rang",
+      "src": null,
+      "poster": "https://i.ytimg.com/vi/SWCdzc7Rang/hqdefault.jpg",
+      "label": "Bru Ferri en directo",
+      "provisional": true
+    }
   },
   "booking": {
     "label": "Booking y management",
@@ -92,5 +99,9 @@
       "code": "EN",
       "name": "English"
     }
-  ]
+  ],
+  "discography": {
+    "kicker": "Colección",
+    "title": "Discografía"
+  }
 }

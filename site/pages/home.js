@@ -6,6 +6,7 @@ import { ContactSheet } from '../../src/components/contact-sheet.js';
 import { Document } from './layout.js';
 import { Hero } from '../sections/hero.js';
 import { About } from '../sections/about.js';
+import { Discography } from '../sections/discography.js';
 import { Concerts } from '../sections/concerts.js';
 import { Footer } from '../sections/footer.js';
 
@@ -17,7 +18,7 @@ export default async function home() {
   const years = [...new Set(upcoming(concerts, today).map((c) => (c.date_start || c.date_end || c.date_tba).slice(0, 4)))];
   const album = albums.list.find((a) => a.slug === albums.default) || albums.list[0];
   const year = today.slice(0, 4);
-  const body = html`${Hero({ profile, next: items[0] })}${About({ profile, albums })}${Concerts({ items, projects: profile.projects, year: years.join(' — ') })}${Footer({ profile, year })}`;
+  const body = html`${Hero({ profile, next: items[0] })}${About({ profile })}${Discography({ profile, albums })}${Concerts({ items, projects: profile.projects, year: years.join(' — ') })}${Footer({ profile, year })}`;
   const dock = html`<div class="bf-player-spacer"></div><div class="bf-dock-bottom" data-mount="player">${PlayerBar({ albums: albums.list, album })}</div>
   <div data-mount="contact">${ContactSheet({ booking: profile.booking, reasons: profile.contactReasons })}</div>`;
   return Document({

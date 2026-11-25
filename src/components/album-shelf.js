@@ -14,11 +14,11 @@ function place(i, active, side) {
 }
 
 // AlbumShelf · colección coleccionable; tocar un disco lo trae al frente con sus pistas
-export function AlbumShelf({ albums, active = null, now = null }) {
+export function AlbumShelf({ albums, active = null, now = null, wide = false }) {
   let side = 0;
   const al = active === null ? albums[1] : albums[active];
   const total = String(albums.length).padStart(2, '0');
-  return html`<div class="bf-shelf" role="region" aria-label="Colección de discos" data-feature="shelf">
+  return html`<div class="bf-shelf${wide ? ' bf-shelf--wide' : ''}" role="region" aria-label="Colección de discos" data-feature="shelf">
     <div class="bf-shelf__stage">
       <img class="bf-shelf__glow" src="${al.cover}" alt="" aria-hidden="true">
       ${albums.map((a, i) => {
