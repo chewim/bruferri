@@ -2,6 +2,8 @@ import { html } from '../lib/dom.js';
 import { Icon } from './icon.js';
 
 const initials = (name) => name.split(/\s+/).map((w) => w[0]).slice(0, 2).join('');
+// Tiempo de lectura: 2 s de base + 0,25 s por palabra (6 palabras ≈ 3,5 s; 10 ≈ 4,5 s)
+const dwell = (quote) => (2 + quote.trim().split(/\s+/).length * 0.25).toFixed(2);
 
 // Testimonials · opiniones del sector de una en una, en el mismo espacio. Avanza solo con barra de progreso
 // (la feature), se pausa al pasar por encima, con el foco o con el botón; con "reducir movimiento" no avanza.
@@ -19,7 +21,7 @@ export function Testimonials({ items, active = 0, label = 'Opiniones' }) {
     </div>
     <div class="bf-testimonials__nav">
       <div class="bf-testimonials__steps">
-        ${items.map((t, i) => html`<button class="bf-testimonials__step" type="button" aria-label="Ver opinión ${i + 1} de ${items.length}: ${t.author}" aria-current="${i === active ? 'true' : 'false'}" data-action="testimonial-go" data-index="${i}"><span class="bf-testimonials__fill"></span></button>`)}
+        ${items.map((t, i) => html`<button class="bf-testimonials__step" type="button" aria-label="Ver opinión ${i + 1} de ${items.length}: ${t.author}" aria-current="${i === active ? 'true' : 'false'}" data-action="testimonial-go" data-index="${i}" style="--dwell: ${dwell(t.quote)}s"><span class="bf-testimonials__fill"></span></button>`)}
       </div>
       <button class="bf-icon-btn bf-icon-btn--s bf-icon-btn--bare bf-testimonials__toggle" type="button" aria-label="Pausar las opiniones" aria-pressed="false" data-action="testimonial-toggle">${Icon('pause', 's')}</button>
     </div>

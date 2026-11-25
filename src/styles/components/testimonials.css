@@ -1,7 +1,7 @@
 /* Testimonials · una opinión cada vez, en la misma caja, con barra de progreso tipo "stories" */
-.bf-testimonials { --bf-dwell: 7s; display: grid; gap: var(--bf-space-4); }
+.bf-testimonials { display: grid; gap: var(--bf-space-4); }
 .bf-testimonials__stage { display: grid; }
-.bf-testimonials__slide { grid-area: 1 / 1; display: grid; gap: var(--bf-space-3); align-content: start; opacity: 0; transform: translateY(var(--bf-space-1)); transition: opacity .5s, transform .5s var(--bf-ease); pointer-events: none; }
+.bf-testimonials__slide { grid-area: 1 / 1; display: grid; gap: var(--bf-space-3); align-content: start; opacity: 0; transform: translateY(var(--bf-space-1)); transition: opacity .25s, transform .25s var(--bf-ease); pointer-events: none; }
 .bf-testimonials__slide[data-state="on"] { opacity: 1; transform: none; pointer-events: auto; }
 .bf-testimonials__quote { margin: 0; font-weight: 500; font-size: var(--bf-text-heading); line-height: var(--bf-lh-heading); letter-spacing: -0.015em; text-wrap: balance; }
 .bf-testimonials__quote p::before { content: "“"; color: var(--bf-accent); }
@@ -17,7 +17,7 @@
 .bf-testimonials__step::before, .bf-testimonials__fill { grid-area: 1 / 1; height: 3px; border-radius: var(--bf-radius-pill); }
 .bf-testimonials__step::before { content: ""; background: var(--bf-line); }
 .bf-testimonials__fill { width: 0; background: var(--bf-accent); }
-.bf-testimonials__step[aria-current="true"] .bf-testimonials__fill { animation: bf-testimonial-fill var(--bf-dwell) linear forwards; }
+.bf-testimonials__step[aria-current="true"] .bf-testimonials__fill { animation: bf-testimonial-fill var(--dwell, 4s) linear forwards; }
 .bf-testimonials[data-paused="true"] .bf-testimonials__fill { animation-play-state: paused; }
 .bf-testimonials[data-static="true"] .bf-testimonials__step[aria-current="true"] .bf-testimonials__fill { animation: none; width: 100%; }
 @keyframes bf-testimonial-fill { to { width: 100%; } }

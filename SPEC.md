@@ -7,7 +7,7 @@ Pliego de condiciones para el agente. Si algo no está aquí, se pregunta.
 ### Web pública
 | Pantalla | Debe hacer |
 |---|---|
-| Inicio | Foto de portada · nombre + oficio · player fijo en pausa (pista por defecto configurable) con selector de disco → [docs/specs/player-albumes.md](docs/specs/player-albumes.md) · resumen + "Ver trayectoria" · agenda con filtros por proyecto y "Ver todas" · footer con booking · Contacta arriba a la izquierda |
+| Inicio | Foto de portada · nombre + oficio · opiniones del sector → [docs/specs/opiniones.md](docs/specs/opiniones.md) · player fijo en pausa (pista por defecto configurable) con selector de disco → [docs/specs/player-albumes.md](docs/specs/player-albumes.md) · resumen + "Ver trayectoria" · agenda con filtros por proyecto y "Ver todas" · footer con booking · Contacta arriba a la izquierda |
 | Trayectoria | Hitos · proyectos actuales · discografía · formatos y facetas · CTA a conciertos y contacto |
 | Contacto (hoja) | Motivo · nombre · email · mensaje (asunto precargado si viene de un concierto) → envío → confirmación → volver / ver conciertos |
 | Legal | Aviso legal y política de privacidad (formulario con datos personales) |
