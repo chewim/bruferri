@@ -6,6 +6,7 @@
 import { readdirSync, readFileSync, writeFileSync, mkdirSync, rmSync, cpSync, existsSync, watch } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
+import { createHash } from 'node:crypto';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const DIST = join(ROOT, 'dist');
@@ -27,6 +28,8 @@ async function build() {
     ...css(join(STYLES, 'sections'))
   ].join('\n');
   writeFileSync(join(DIST, 'assets', 'bf.css'), bundle);
+  // versión de los archivos: cambia en cada build para que el navegador no sirva CSS o JS viejos
+  process.env.BF_VERSION = createHash('sha1').update(bundle + Date.now()).digest('hex').slice(0, 8);
 
   // 2 · Módulos para el navegador (misma estructura que el repo, así los imports relativos no cambian)
   cpSync(join(ROOT, 'src'), join(DIST, 'assets', 'js', 'src'), { recursive: true, filter: (p) => !p.includes(`${join('src', 'styles')}`) });

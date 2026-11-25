@@ -1,6 +1,6 @@
 import { html, raw } from '../../src/lib/dom.js';
 import { TopBar } from '../../src/components/top-bar.js';
-import { BASE } from '../../src/lib/env.js';
+import { BASE, VERSION } from '../../src/lib/env.js';
 
 // Documento común: <head>, barra superior y datos para las features del navegador
 export function Document({ title, description, image, profile, body, data, dock = '' }) {
@@ -20,7 +20,7 @@ ${image ? html`<meta property="og:image" content="${image}">` : ''}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&amp;display=swap">
-<link rel="stylesheet" href="assets/bf.css">
+<link rel="stylesheet" href="assets/bf.css?v=${VERSION}">
 </head>
 <body>
 <div class="bf-page">
@@ -29,7 +29,7 @@ ${image ? html`<meta property="og:image" content="${image}">` : ''}
   ${dock}
 </div>
 <script type="application/json" id="bf-data">${raw(JSON.stringify(data).replace(/</g, '\\u003c'))}</script>
-<script type="module" src="assets/js/site/main.js"></script>
+<script type="module" src="assets/js/site/main.js?v=${VERSION}"></script>
 </body>
 </html>
 `;
