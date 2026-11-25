@@ -106,8 +106,9 @@ Formato: fecha · decisión · descartes · por qué. Las marcadas **(propuesta)
 - **Descartes:** foto "cielo" animada y fondo abstracto como provisionales (David prefiere el vídeo real de Bru).
 
 ## 2026-11-25 · Opiniones del sector en la portada
-- **Decisión (David):** dos opiniones reales (enviadas por Bru el 21/11) dentro de la portada, en la franja baja entre el nombre y el player: aval para programadores en el primer pantallazo.
+- **Decisión (David):** dos opiniones reales (enviadas por Bru el 21/11) en una sección propia justo después de la portada. Se probaron dentro de la portada y se descartó: demasiada información en el primer pantallazo.
+- **Por qué (diseño conductual):** menos carga cognitiva en la portada (ya tiene nombre, definición, oficios, fecha y player); la cita aislada se recuerda más (Von Restorff); secuencia impresión → prueba social con autoridad → detalle (bio, discos, fechas).
 - **Frases:** Adriano Galante: "Una auténtica fuerza de la naturaleza." · Òscar Dalmau (en catalán, como la escribió): "Cartes d'amor musicades pel Bru amb una sensibilitat formidable." Se eligieron las que funcionan sin nombrar el disco.
-- **Formato:** comillas en acento, texto `body-l`, nombre en caption. Sin laureles ni estrellas (abaratan). Componente `PressQuote` (`--compact` en la portada).
-- **Descartes:** sección aparte bajo la portada; ponerlas en la Discografía (no cargar los vinilos con más información).
-- **Efecto:** la portada con opiniones mide entre 760 y 920 px de alto en escritorio para que nada choque.
+- **Formato:** comillas grandes en acento, frase en `lead`, nombre en caption, mucho aire. Sin laureles ni estrellas (abaratan). Componente `PressQuote`.
+- **Descartes:** dentro de la portada (saturaba); en la Discografía (no cargar los vinilos con más información).
+- **Siguiente para reforzar la autoridad:** el cargo de cada uno junto al nombre (BACKLOG).

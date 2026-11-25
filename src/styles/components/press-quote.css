@@ -4,11 +4,3 @@
 .bf-quote__text { margin: 0; font-weight: 500; font-size: var(--bf-text-title); line-height: var(--bf-lh-title); letter-spacing: -0.01em; text-wrap: balance; }
 .bf-quote__by { font-weight: 500; font-size: var(--bf-text-caption); line-height: var(--bf-lh-caption); font-variation-settings: "wdth" 110; letter-spacing: 0.14em; text-transform: uppercase; }
 @media (min-width: 640px) { .bf-quote__text { font-size: var(--bf-text-lead); line-height: var(--bf-lh-lead); } }
-/* --compact · en la portada: comillas en línea, una o dos líneas de texto */
-.bf-quote--compact { gap: var(--bf-space-1); }
-.bf-quote--compact::before { display: none; }
-.bf-quote--compact .bf-quote__text { font-size: var(--bf-text-body-l); line-height: var(--bf-lh-body-l); }
-.bf-quote--compact .bf-quote__text p::before { content: "“"; color: var(--bf-accent); }
-.bf-quote--compact .bf-quote__text p::after { content: "”"; color: var(--bf-accent); }
-.bf-quote--compact .bf-quote__by { color: var(--bf-ink-muted); }
-.bf-quote--compact .bf-quote__author { color: var(--bf-ink); }
